@@ -1,23 +1,17 @@
 var express = require('express');
 var notelyServerApp = express();
+var Note = require('./models/note');
 
-//Cross-origin Resourse sharing middleware
+// Cross-Origin Resource Sharing (CORS) middleware
 notelyServerApp.use(function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
   next();
 });
 
 notelyServerApp.get('/', function(req, res) {
-  res.json([
-    {
-      title: 'Edited hard coded note!',
-      body_html: 'Cool note.  Aww shucks.'
-    },
-    {
-      title: 'Another edited hardcoded note',
-      body_html: "Ain't life grand?"
-    }
-  ]);
+  Note.find().then(function(notes) {
+    res.json(notes);
+  });
 });
 
 notelyServerApp.listen(3030, function() {
