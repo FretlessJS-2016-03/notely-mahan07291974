@@ -7,4 +7,4 @@ tmp
 Thumbs.db
 .idea
 .npm-debug.log
-app/bower_components
+.env

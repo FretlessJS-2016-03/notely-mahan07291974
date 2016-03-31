@@ -1,3 +1,4 @@
+require('dotenv').load();
 var express = require('express');
 var notelyServerApp = express();
 var Note = require('./models/note');
@@ -30,6 +31,8 @@ notelyServerApp.post('/notes', function(req, res) {
       message: 'Saved!',
       note: noteData
     });
+
+    note.clear()
   });
 });
 
