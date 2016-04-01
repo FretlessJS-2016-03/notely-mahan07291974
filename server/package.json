@@ -2,13 +2,13 @@
   "name": "notelyserver",
   "version": "0.1.0",
   "description": "Node backend for a note-taking app.",
-  "repository": "https://github.com/FretlessJS-2016-03/notely-mahan07291974.git",
+  "repository": "https://github.com/FretlessJS-2016-03/notely.git",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "dev": "node_modules/.bin/supervisor app.js"
   },
-  "author": "Matt Mahan",
+  "author": "Dave Strus",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.0",
@@ -19,6 +19,7 @@
     "sanitize-html": "^1.11.4"
   },
   "devDependencies": {
+    "eslint": "^2.5.3",
     "supervisor": "^0.9.1"
   }
 }

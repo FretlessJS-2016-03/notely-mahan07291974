@@ -11,8 +11,12 @@
             "error",
             2
         ],
-        "quotes": [
+        "linebreak-style": [
             "error",
+            "unix"
+        ],
+        "quotes": [
+            "warn",
             "single"
         ],
         "semi": [
@@ -20,7 +24,7 @@
             "always"
         ],
         "dot-notation": [
-          "error"
+          "warn"
         ],
         "eqeqeq": [
           "error"
